@@ -1,0 +1,9 @@
+{
+  "watch": ["backend/**/*.ts"],
+  "ext": "ts,json,js",
+  "ignore": ["node_modules", "dist", "nodemon.json"],
+  "exec": "cross-env NODE_ENV=development ts-node app.ts",
+  "restartable": "rs",
+  "verbose": true,
+  "delay": "500ms"
+}
