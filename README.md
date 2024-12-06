@@ -17,7 +17,7 @@
 
 | Katman      | Teknolojiler                  |
 |-------------|-------------------------------|
-| **Frontend**  | React, Shadcn,WebSocket     | 
+| **Frontend**  | React, Shadcn,Apollo-Client | 
 | **Backend**   | Node.js,Express,GraphQL     |
 | **Veritabanı**| PostgreSQL                  |
 | **Konteyner** | Docker                      |
