@@ -1,5 +1,5 @@
-import pkg from "pg";
-import dotenv from "dotenv";
+import { Pool } from "pg";
+import * as dotenv from "dotenv";
 
 dotenv.config();
 
@@ -8,7 +8,6 @@ interface Props {
   params?: (string | number | boolean | null | Date)[];
 }
 
-const { Pool } = pkg;
 const pool = new Pool({
   connectionString: process.env.DATABASE_URI,
   ssl: {

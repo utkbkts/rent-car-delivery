@@ -150,3 +150,21 @@ export const updateCarController = async (carId: any, carInput: CarInput) => {
     throw error;
   }
 };
+
+export const deleteCarController = async (carId: any) => {
+  try {
+    const query = {
+      text: `
+                DELETE FROM car
+                WHERE id = $1
+            `,
+      values: [carId],
+    };
+
+    const result: any = await pool.query(query);
+    return result.rowCount > 0;
+  } catch (error: any) {
+    console.log("Error deleting car from the database:", error.message);
+    throw error;
+  }
+};

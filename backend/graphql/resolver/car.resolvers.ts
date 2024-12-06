@@ -1,5 +1,6 @@
 import {
   createCar,
+  deleteCarController,
   getAllCarsController,
   getByCarId,
   updateCarController,
@@ -29,6 +30,9 @@ export const carResolvers = {
       { carId, carInput }: { carId: any; carInput: CarInput }
     ) => {
       return await updateCarController(carId, carInput);
+    },
+    deleteCar: async (_: any, { carId }: { carId: string }) => {
+      return await deleteCarController(carId);
     },
   },
 };

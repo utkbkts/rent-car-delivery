@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node backend/app.ts",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "seeder": "tsc seeder/seeder.ts --outDir .temp && node .temp/seeder/seeder.js && del .temp"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +29,7 @@
     "@types/dotenv": "^6.1.1",
     "@types/express": "^5.0.0",
     "@types/express-serve-static-core": "^5.0.2",
+    "@types/node": "^22.10.1",
     "@types/pg": "^8.11.10",
     "cross-env": "^7.0.3",
     "nodemon": "^3.1.7",
